@@ -162,7 +162,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 	<div class="small-12 medium-2 large-2 columns">
 	<?php
 			echo '<div class="small-12 medium-12 large-12 columns event-date">';
-         echo '<div class="small-12 medium-12 large-12 columns calender">';                
+         echo '<div class="small-12 medium-12 large-12 columns calendar">';                
 										echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
 										echo '<p class="stocker-day">'.$eventstartday.'</p>';
 						echo '</div>';

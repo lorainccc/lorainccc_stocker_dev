@@ -16,7 +16,7 @@ get_header(); ?>
 		<h3>SIDEBAR MENU</h3>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
-	<div id="secondary" class="secondary">
+	<div id="secondary" class="medium-12 columns secondary nopadding">
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php

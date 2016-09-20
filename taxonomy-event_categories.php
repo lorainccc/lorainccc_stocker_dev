@@ -49,9 +49,7 @@ $term = get_queried_object();
     'meta_key' => 'event_start_date',
 );
 $query = new WP_Query( $args );
-	if ($query->have_posts()):
-
-    // output the term name in a heading tag
+  // output the term name in a heading tag
     echo '<h2>' . $term->name . ' Events </h2>';
 
 				// output the term descriptopn in a paragraph tag
@@ -60,8 +58,8 @@ $query = new WP_Query( $args );
 			// output the link to the page that contains the Category Description
 			$siteurl= get_site_url();
 			echo '<a href="'.$siteurl.'/' . $term->slug .'">'. 'Learn More</a>';
-
-
+	
+		if ($query->have_posts()):
         // Start the Loop
         while ( $query->have_posts() ) : $query->the_post();
 

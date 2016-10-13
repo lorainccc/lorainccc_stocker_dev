@@ -12,7 +12,16 @@ h1, h2 {
 	font-weight: $font-bold;
 	 font-family: 'Raleway', sans-serif;
 }
-
+h3,h4{
+	font-weight:700;
+	font-family:'Raleway',sans-serif;
+}
+h3{
+	font-size:1.425rem;
+}
+h4{
+	font-size:1.125rem;
+}
 h2 {
 	line-height: 110%;
 	margin-top: .25rem;	

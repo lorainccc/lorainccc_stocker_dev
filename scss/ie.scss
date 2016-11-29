@@ -8,16 +8,6 @@ div.row hr {
     padding: 1rem 0;
     width: 100%;
 }
-}
  
-@supports (-ms-accelerator:true) {
-  /* IE Edge 12+ CSS styles go here */ 
- div.row hr {
-    margin: -80px auto 40px;
-    height: 10px;
-    padding: 1rem 0;
-    width: 100%;
 }
-}
- 
  

@@ -45,10 +45,15 @@ function lorainccc_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'lccc-framework' ),
-		'stocker-primary' => esc_html__( 'Stocker Menu', 'lorainccc' ),
-		'footer-quicklinks-nav' => esc_html__( 'Footer Quicklinks', 'lorainccc' ),
 		'left-nav' => esc_html__( 'Left Nav', 'lorainccc' ),
+		'footer-quicklinks-nav' => esc_html__( 'Footer Quicklinks', 'lorainccc' ),
+		'footer-campus-location-nav' => esc_html__( 'Footer Campus Locations', 'lorainccc' ),
+		'mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc_subsite' ),
+		'header-shortcuts' => esc_html__( 'Header Shortcuts Menu', 'lorainccc' ),
+  'mobile-header-shortcuts' => esc_html__( 'Mobile Header Shortcuts Menu', 'lorainccc' ),
+		'stocker-primary' => esc_html__( 'Stocker Menu', 'lorainccc' ),
 		'stocker-mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc' ),
+		'stocker-left-nav' => esc_html__( 'Stocker Left Nav', 'lorainccc' ),
 		'about-menu' => esc_html__( 'About Menu', 'lorainccc' ),
 		'visual-art-menu' => esc_html__( 'Visual Art Menu', 'lorainccc' ),		
 	) );
@@ -162,6 +167,9 @@ add_action( 'widgets_init', 'lorainccc_widgets_init' );
  * Enqueue scripts and styles.
  */
 function lorainccc_foundation_scripts() {
+  // Add Genericons, used in the main stylesheet.
+	 wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
+
 	 wp_enqueue_style( 'foundation-app',  get_template_directory_uri() . '/foundation/css/app.css' );
 		wp_enqueue_style( 'foundation-normalize', get_template_directory_uri() . '/foundation/css/normalize.css' );
 		wp_enqueue_style( 'foundation',  get_template_directory_uri() . '/foundation/css/foundation.css' );
@@ -182,6 +190,8 @@ wp_localize_script( 'lorainccc-function-script', 'screenReaderText', array(
 add_action( 'wp_enqueue_scripts', 'lorainccc_foundation_scripts' );
 
 function lorainccc_scripts() {
+		wp_enqueue_style( 'lccc-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Raleway:400,400italic,700,700italic', false ); 
+
 	wp_enqueue_style( 'lorainccc-style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -270,6 +280,24 @@ function lc_drill_menu_fallback($args)
 }
 
 /* End Menu Functions */
+// CHANGE PAGINATION
+function paginate() {
+    global $wp_query, $wp_rewrite;
+    $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+    $pagination = array(
+        'base' => @add_query_arg('page','%#%'),
+        'format' => '',
+        'total' => $wp_query->max_num_pages,
+        'current' => $current,
+        'show_all' => true,
+        'type' => 'plain'
+    );
+    if ( $wp_rewrite->using_permalinks() ) $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
+    if ( !empty($wp_query->query_vars['s']) ) $pagination['add_args'] = array( 's' => get_query_var( 's' ) );
+    echo paginate_links( $pagination );
+}
+
+
 // CHANGE EXCERPT LENGTH FOR DIFFERENT POST TYPES
  
 function custom_excerpt_length($length) {
@@ -288,4 +316,6 @@ add_filter('excerpt_length', 'custom_excerpt_length');
 $role = get_role('editor');
 $role->remove_cap('publish_posts');
 $role->remove_cap('publish_pages');
+
+
 ?>

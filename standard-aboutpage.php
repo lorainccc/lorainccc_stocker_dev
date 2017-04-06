@@ -13,14 +13,14 @@ get_header(); ?>
 </div>
 <div class="medium-4 large-4 columns hide-for-small-only">
 <?php $menuslug = $post->post_name; 
-echo $menuslug;
+//echo $menuslug;
 ?>	
 <div class="small-12 medium-12 large-12 columns sidebar-widget">
 		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
 <h3><?php echo bloginfo('the-title'); ?></h3>
 		</div>
 	<?php	if ( has_nav_menu( 'about-menu' ) ) : ?>
-	<div id="secondary" class="secondary">
+	<div id="secondary" class="medium-12 columns secondary nopadding">
 		<?php if ( has_nav_menu( 'about-menu' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php

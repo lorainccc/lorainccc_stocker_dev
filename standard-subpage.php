@@ -21,7 +21,7 @@ echo $menuslug;
 		</div>
 	</div>
 	</div>
-	<div class="small-12 medium-8 large-8 columns">		
+	<div class="small-12 medium-8 large-8 columns page-container">		
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>

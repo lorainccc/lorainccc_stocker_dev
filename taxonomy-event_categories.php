@@ -40,15 +40,31 @@ get_header(); ?>
 <?php
 			// get the currently queried taxonomy term, for use later in the template file
 $term = get_queried_object();
-					$paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
+					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
      $args = array(
     'post_type' => 'lccc_events',
     'event_categories' => $term->slug,
     'post_status' => 'publish',
-    'order'=> 'ASC',
-    'orderby'=> 'meta_value',
-				'paged' => $paged,		
-    'meta_key' => 'event_start_date',
+    'paged' => $paged,
+//    'order'=> 'ASC',
+//    'orderby'=> 'meta_value',
+//				'paged' => $paged,		
+//    'meta_key' => 'event_start_date',
+    'meta_query' => array(
+    'relation' => 'AND',
+    'event_start_day_clause' => array(
+      'key' => 'event_start_date',
+      'compare' => 'EXISTS',
+    ),
+    'event_start_time_clause' => array(
+      'key' => 'event_start_time',
+      'compare' => 'EXISTS',
+    ),
+   ),
+   'orderby' => array(
+     'event_start_day_clause' => 'ASC',
+     'event_start_time_clause' => 'ASC',
+   ),
 );
 $query = new WP_Query( $args );
 

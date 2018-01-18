@@ -18,7 +18,7 @@
         <li><a href="https://twitter.com/StockerArts" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/twitter_white.svg" height="30" width="30" alt="" /></a></li>
        
       </ul>
-      <a href="https://www.lorainccc.edu/LCCCMobile/" target="_blank" class="clearfix mobile-app-link"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/smartphone_yellow.svg" heigth="33" width="20" alt=""/>
+      <a href="https://www.lorainccc.edu/campus-technology/lccc-mobile/" target="_blank" class="clearfix mobile-app-link"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/smartphone_yellow.svg" heigth="33" width="20" alt=""/>
       <h2>LCCC'S<br />
         Mobile App</h2>
       </a> </div>

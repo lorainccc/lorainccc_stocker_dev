@@ -14,6 +14,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
+</head>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -45,7 +46,6 @@
 </script>
 <!-- End Eloqua tracking script -->
 
-</head>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lccc-framework' ); ?></a>
@@ -60,11 +60,11 @@
         <li><a href="http://sa1.seatadvisor.com/sabo/servlets/EventSearch?presenter=STOCKER" alt="Buy Tickets" class="ql-icon ql-4">Buy Tickets</a></li>
       </ul>
       <!-- This should be similar to what is generated when using Wordpress searchform.php -->
-      <form role="search" method="get" class="search-form" action="">
-        <label>
-          <input type="search" placeholder="Search" name="s" class="float-right"/>
-        </label>
-      </form>
+					   <div class="large-9 medium-6 columns searchbox hide-for-print">
+        <?php 
+										the_widget('WP_Widget_Search');
+								?>
+					</div>
     </div>
   </div>
 <div class="medium-blue-bg show-for-medium">

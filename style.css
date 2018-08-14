@@ -40,23 +40,24 @@ h2.cta-h2{text-transform:uppercase;font-family:'Raleway',sans-serif}
 p{font-weight:500;font-size:1rem;font-family:'Open Sans',sans-serif}
 a{font-family:'Open Sans',sans-serif}/*! Base Typography *//*! Typography Helpers *//*!
 Section 1: Foundation
-*//*! Section 2: Content */.columns.view-all-link a.button.expand{margin-top:21px}
-.column.row.event-list-row hr{border:0;height:20px;width:90%;height:50px;padding:.5rem 0;-webkit-box-shadow:0 15px 15px -15px #dcdcdc;box-shadow:0 15px 15px -15px #dcdcdc;margin:-50px auto 10px}
-div.row hr{margin:-80px auto 40px;height:10px;padding:3rem 0;width:100%}.columns.event-container{margin-top:35px}
-.columns.content-container{margin-top:1.5rem}.columns.event-date{padding:0}h1.entry-title.indiv-event{font-size:2.625rem}
-header.entry-header p{margin-bottom:0}.columns.event-list-event-container{padding-top:3rem}
-a.buy-ticket-link{font-size:1.6rem}a.buy-ticket-link:before{margin:16px 8px 0 0;vertical-align:-40%;content:url(/wp-content/themes/lorainccc_stocker/images/theater-tickets.png)}
-.columns.announ-container{padding-top:2rem}h4.event-sub-heading{font-size:1.25rem;font-style:italic}
+*//*! Section 2: Content */.cell.view-all-link a.button.expand{margin-top:21px}
+.cell.grid-x.grid-margin-x.event-list-row hr{border:0;height:20px;width:90%;height:50px;padding:.5rem 0;-webkit-box-shadow:0 15px 15px -15px #dcdcdc;box-shadow:0 15px 15px -15px #dcdcdc;margin:-50px auto 10px}
+div.grid-x.grid-margin-x hr{margin:-80px auto 40px;height:10px;padding:3rem 0;width:100%}
+.cell.event-container{margin-top:35px}.cell.content-container{margin-top:1.5rem}.cell.event-date{padding:0}
+h1.entry-title.indiv-event{font-size:2.625rem}header.entry-header p{margin-bottom:0}
+.cell.event-list-event-container{padding-top:3rem}a.buy-ticket-link{font-size:1.6rem}
+a.buy-ticket-link:before{margin:16px 8px 0 0;vertical-align:-40%;content:url(/wp-content/themes/lorainccc_stocker/images/theater-tickets.png)}
+.cell.announ-container{padding-top:2rem}h4.event-sub-heading{font-size:1.25rem;font-style:italic}
 h1.entry-title,h1.page-title{line-height:110%;margin-top:.25rem;font-size:2.625rem}
 header.entry-header{padding:0;margin-top:.4rem}p.stocker-month{color:#0c3b78;display:block;line-height:100%;text-transform:uppercase;font-weight:700;font-size:1.4rem;margin-top:-0.5rem}
 p.stocker-day{margin-top:-0.9rem;text-align:center;color:#0c3b78;display:block;line-height:100%;text-transform:uppercase;font-weight:700;font-size:1.75rem}
-.events-row{padding-top:20px}.event-date p.month{color:#000;font-size:1.6rem}.columns.nopadding{padding:0}
-.columns.stocker-highlight-container{border-bottom:5px solid #ffc600;padding:0;margin-bottom:40px}
-.columns.stocker-highlights{padding-top:30px}.columns.highlight-link{text-align:center}
-.columns.highlight-content{padding-top:1rem;min-height:141px}.columns.stocker-badges-container{padding-top:30px}
-.columns.highlight-image{padding:0}.columns.highlight-text{padding:0;-webkit-box-shadow:inset 0 0 10px #dcdcdc;box-shadow:inset 0 0 10px #dcdcdc}
-.columns.highlight-header{background:#0c3b78}.columns.highlight-header h3{font-weight:700;color:#fefefe;padding:10px 0;font-size:1.4375rem;text-align:center}
+.events-row{padding-top:20px}.event-date p.month{color:#000;font-size:1.6rem}.cell.nopadding{padding:0}
+.cell.stocker-highlights{padding-top:30px}.cell.highlight-link{text-align:center}
+.cell.highlight-content{padding-top:1rem;min-height:141px}.cell.stocker-badges-container{padding-top:30px}
+.cell.highlight-image{padding:0;width:50%;margin-right:0 !important;float:left}.cell.highlight-text{padding:0;-webkit-box-shadow:inset 0 0 10px #dcdcdc;box-shadow:inset 0 0 10px #dcdcdc;width:50%;float:left}
+.cell.highlight-header{background:#0c3b78}.cell.highlight-header h3{font-weight:700;color:#fefefe;padding:10px 0;font-size:1.4375rem;text-align:center}
 .eventcontainer .eventhumbnail{padding-top:12px;padding-left:0;padding-right:.5rem}
+.cell.stocker-highlight-container{border-bottom:5px solid #ffc600 !important;padding:0;width:100%;height:auto;position:relative;float:left;margin-bottom:40px}
 .entry-footer{background:#fff}article{background:#fff}.gateway-header{padding:0}.sidebar-widget{padding-top:2.7rem}
 .breadcrumb-container{padding-top:20px;padding-left:2rem}a.button{margin:0 0 1rem 0}
 .lccc_event_header{background:#0c3b78;color:#fefefe;margin-top:0;padding:0 0 .5rem 1.5rem}
@@ -67,8 +68,8 @@ p.stocker-day{margin-top:-0.9rem;text-align:center;color:#0c3b78;display:block;l
 .orbit-slide h2{font-size:2.1875rem;color:#0c3b78;line-height:100%}.orbit-slide p{font-size:.75rem}
 .cta-icons{width:100%;background-color:#0055a5;border-width:5px 0;border-style:solid;border-color:#ffc600}
 .cta-icons .icon-label{font-weight:500;color:#fefefe;font-size:1.125rem;margin-top:1rem}
-.cta-icons .row{background-image:url(/wp-content/themes/lorainccc/images/logo_xl_lccc_blue.png);background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover;padding:15px 0}
-.cta-icons .row .columns{padding:1.75rem 0}.yellow-icon{width:100px;height:100px;border-radius:50%;background-color:#ffc600;-webkit-transition:background-color .25s ease-out,color .25s ease-out;transition:background-color .25s ease-out,color .25s ease-out;position:relative}
+.cta-icons .grid-x.grid-margin-x{background-image:url(/wp-content/themes/lorainccc/images/logo_xl_lccc_blue.png);background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover;padding:15px 0}
+.cta-icons .grid-x.grid-margin-x .cell{padding:1.75rem 0}.yellow-icon{width:100px;height:100px;border-radius:50%;background-color:#ffc600;-webkit-transition:background-color .25s ease-out,color .25s ease-out;transition:background-color .25s ease-out,color .25s ease-out;position:relative}
 .yellow-icon img{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto}.yellow-icon:hover{background-color:smart-scale(#ffc600,10%,25%)}
 .service-box{margin-top:3rem}.service-box-header h2{text-transform:uppercase;font-weight:700;color:#fefefe;font-size:.6875rem;background:#0c3b78;line-height:170%;padding:1rem 0;margin-bottom:0;margin-top:0}
 .service-box-header h2 span{display:block;font-size:1.5625rem;color:#ffc600;text-transform:capitalize}
@@ -103,9 +104,9 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;-webkit-box-shadow:
 .gateway-links{padding-top:2rem;margin-bottom:2rem;box-shadow:0 -20px 20px -20px rgba(216,216,216,0.8);-moz-box-shadow:0 -20px 20px -20px rgba(216,216,216,0.8);-webkit-box-shadow:0 -20px 20px -20px rgba(216,216,216,0.8)}
 .gateway-links h2{font-size:1.5rem;margin-bottom:0}.gateway-links .menu>li>a{font-size:.75rem;color:#5593db;text-decoration:underline;padding:.5rem 0}
 .gateway-links img{margin-top:.5rem;margin-bottom:.5rem;width:100%;height:auto}.gateway-links a{font-size:.8125rem;text-decoration:underline;font-weight:800}
-.row .row.lccc-badge{padding-top:1.25rem;padding-bottom:1.25rem;font-size:.75rem;color:#fefefe;margin:1rem 0 0 0}
-.row .row.lccc-badge h3{font-weight:600;font-size:1.25rem;color:#fefefe;margin-bottom:.25rem}
-.row .row.lccc-badge .icon{margin-top:.5rem}.crumbs{padding-top:2rem;padding-bottom:2rem;font-size:.8125rem}
+.grid-x.grid-margin-x .grid-x.grid-margin-x.lccc-badge{padding-top:1.25rem;padding-bottom:1.25rem;font-size:.75rem;color:#fefefe;margin:1rem 0 0 0}
+.grid-x.grid-margin-x .grid-x.grid-margin-x.lccc-badge h3{font-weight:600;font-size:1.25rem;color:#fefefe;margin-bottom:.25rem}
+.grid-x.grid-margin-x .grid-x.grid-margin-x.lccc-badge .icon{margin-top:.5rem}.crumbs{padding-top:2rem;padding-bottom:2rem;font-size:.8125rem}
 .callout-link{color:#0055a5;text-transform:uppercase;font-size:1.25rem;font-weight:800;margin-bottom:2rem;margin-top:2rem;line-height:100%}
 .callout-link img{display:inline-block;margin-right:.5rem}.callout-link a,.callout-link span{color:#5593db}
 .video-container{margin-bottom:2rem;position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden}
@@ -120,7 +121,9 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;-webkit-box-shadow:
 .callout{margin-top:1rem;margin-bottom:2rem}.callout span{display:block}.callout h2{font-weight:600;font-size:1.25rem}
 .callout .name,.callout .hours-label{font-weight:700}.callout .callout-contact-method{margin-top:1.35rem}
 .callout .map-link{margin-top:4.45rem}div.content-area ul li{margin:0 0 0 6px;font-size:1rem}
-.archive-events-container>div{margin:30px 0 0 0}/*!
+.archive-events-container>div{margin:30px 0 0 0}.cell.lccc-badge.Orange{position:relative;float:left}
+.cell.lccc-badge.Green{position:relative;float:left}.cell.icon-container{float:left;margin-left:2% !important;margin-right:4%}
+.cell.badge-text{float:left;width:73%;padding-left:0 !important}/*!
 Section 3: Body
 */img.alignright{float:right;margin:0 0 1em 1em}
 img.alignleft{float:left;margin:0 1em 1em 0}img.aligncenter{display:block;margin-left:auto;margin-right:auto}
@@ -189,13 +192,15 @@ footer ul li{margin-bottom:.75rem}footer .underline>li>a{text-decoration:underli
 .main-navigation ul ul li a{color:#0055a5 !important}ul{margin-top:0 !important}.is-dropdown-submenu{min-width:180px}
 .nopadding{padding:0}@media screen and (min-width:40em){.service-box-copy{padding-left:0}
 .service-box-image{padding-right:0}.service-box .button{position:absolute;bottom:1rem;left:63.5px}
-.service-box-container{height:100%}aside.columns{padding-right:0;padding-left:0}.gateway-main,.home-left{padding-right:5rem}
+.service-box-container{height:100%}aside.cell{padding-right:0;padding-left:0}.gateway-main,.home-left{padding-right:5rem}
 .main-right{padding-left:5rem}header{padding-top:1.5rem}.mobile-app-link img,.mobile-app-link h2{float:left}
-aside.columns{padding-right:.9375rem !important;padding-left:.9375rem !important}
-}@media only screen and (min-width:40em){.slider-container{min-height:460px;padding:0 0 3rem 0}
+aside.cell{padding-right:.9375rem !important;padding-left:.9375rem !important}}@media only screen and (min-width:40em){.slider-container{min-height:460px;padding:0 0 3rem 0}
 }@media screen and (min-width:1074px){nav.menu-centered{height:36px}}@media only screen and (max-width:40em){.slider-container{padding:0 0 3rem 0}
+}@media screen and (max-width:21em){.headerlogo i{display:none}h2.headertext{text-align:center}
 }@media screen and (max-width:39.9375em){h1{font-size:1.35rem;line-height:105%}.white-panel{margin-top:3rem}
 .cta-icons{margin-bottom:2rem}.footer-sm-links{width:210px;margin:0 auto 1rem auto}
-.footer-sm-links li a{padding:0}.footer-sm-links li a img{margin:0 .25rem}footer .row .columns{border-bottom:1px solid #5593db;padding:2rem 0 1rem 0}
-footer{padding-bottom:0}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){div.row hr{margin:-80px auto 40px;height:10px;padding:1rem 0;width:100%}
+.footer-sm-links li a{padding:0}.footer-sm-links li a img{margin:0 .25rem}footer .grid-x.grid-margin-x .cell{border-bottom:1px solid #5593db;padding:2rem 0 1rem 0}
+footer{padding-bottom:0}}@media screen and (max-width:39.938em){.cell.highlight-image,.cell.highlight-text{width:100%;float:none}
+}@media only screen and (min-width:40em) and (max-width:71em){.headerlogo i{display:none}
+h2.headertext{text-align:center}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){div.grid-x.grid-margin-x hr{margin:-80px auto 40px;height:10px;padding:1rem 0;width:100%}
 }

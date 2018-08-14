@@ -1,10 +1,10 @@
 /*! Section 2: Content */
 
-.columns.view-all-link a.button.expand {
+.cell.view-all-link a.button.expand {
 	margin-top: 21px;
 }
 
-.column.row.event-list-row hr {
+.cell.grid-x.grid-margin-x.event-list-row hr {
 	border: 0;
 	height: 20px;
 	width: 90%;
@@ -14,22 +14,22 @@
 	margin: -50px auto 10px
 }
 
-div.row hr {
+div.grid-x.grid-margin-x hr {
 	margin: -80px auto 40px;
 	height: 10px;
 	padding: 3rem 0;
 	width: 100%;
 }
 
-.columns.event-container {
+.cell.event-container {
 	margin-top: 35px;
 }
 
-.columns.content-container {
+.cell.content-container {
 	margin-top: 1.5rem;
 }
 
-.columns.event-date {
+.cell.event-date {
 	padding: 0
 }
 
@@ -41,7 +41,7 @@ header.entry-header p {
 	margin-bottom: 0
 }
 
-.columns.event-list-event-container {
+.cell.event-list-event-container {
 	padding-top: 3rem
 }
 
@@ -55,7 +55,7 @@ a.buy-ticket-link:before {
 	content: url(/wp-content/themes/lorainccc_stocker/images/theater-tickets.png)
 }
 
-.columns.announ-container {
+.cell.announ-container {
 	padding-top: 2rem
 }
 
@@ -106,47 +106,50 @@ p.stocker-day {
 	font-size: 1.6rem
 }
 
-.columns.nopadding {
+.cell.nopadding {
 	padding: 0
 }
 
-.columns.stocker-highlight-container {
-	border-bottom: 5px solid #ffc600;
-	padding: 0;
-	margin-bottom: 40px
-}
 
-.columns.stocker-highlights {
+
+.cell.stocker-highlights {
 	padding-top: 30px
 }
 
-.columns.highlight-link {
+
+
+.cell.highlight-link {
 	text-align: center
 }
 
-.columns.highlight-content {
+.cell.highlight-content {
 	padding-top: 1rem;
 	min-height: 141px
 }
 
-.columns.stocker-badges-container {
+.cell.stocker-badges-container {
 	padding-top: 30px
 }
 
-.columns.highlight-image {
-	padding: 0
-}
-
-.columns.highlight-text {
+.cell.highlight-image {
 	padding: 0;
-	box-shadow: inset 0 0 10px #dcdcdc
+	width: 50%;
+	margin-right: 0 !important;
+	float:left;
 }
 
-.columns.highlight-header {
+.cell.highlight-text {
+	padding: 0;
+	box-shadow: inset 0 0 10px #dcdcdc;
+	width: 50%;
+	float:left;
+}
+
+.cell.highlight-header {
 	background: #0c3b78
 }
 
-.columns.highlight-header h3 {
+.cell.highlight-header h3 {
 	font-weight: 700;
 	color: #fefefe;
 	padding: 10px 0;
@@ -159,7 +162,15 @@ p.stocker-day {
 	padding-left: 0;
 	padding-right: .5rem
 }
-
+.cell.stocker-highlight-container {
+	border-bottom: 5px solid #ffc600 !important;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	position: relative;
+	float:left;
+	margin-bottom: 40px
+}
 .entry-footer {
 	background: #fff
 }
@@ -263,7 +274,7 @@ a.button {
 	margin-top: 1rem
 }
 
-.cta-icons .row {
+.cta-icons .grid-x.grid-margin-x {
 	background-image: url(/wp-content/themes/lorainccc/images/logo_xl_lccc_blue.png);
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -272,7 +283,7 @@ a.button {
 	padding: 15px 0
 }
 
-.cta-icons .row .columns {
+.cta-icons .grid-x.grid-margin-x .cell {
 	padding: 1.75rem 0
 }
 
@@ -646,7 +657,7 @@ hr {
 	font-weight: 800
 }
 
-.row .row.lccc-badge {
+.grid-x.grid-margin-x .grid-x.grid-margin-x.lccc-badge {
 	padding-top: 1.25rem;
 	padding-bottom: 1.25rem;
 	font-size: .75rem;
@@ -654,14 +665,14 @@ hr {
 	margin: 1rem 0 0 0
 }
 
-.row .row.lccc-badge h3 {
+.grid-x.grid-margin-x .grid-x.grid-margin-x.lccc-badge h3 {
 	font-weight: 600;
 	font-size: 1.25rem;
 	color: #fefefe;
 	margin-bottom: .25rem
 }
 
-.row .row.lccc-badge .icon {
+.grid-x.grid-margin-x .grid-x.grid-margin-x.lccc-badge .icon {
 	margin-top: .5rem
 }
 
@@ -672,7 +683,7 @@ hr {
 }
 
 @media screen and (min-width:40em) {
-	aside.columns {
+	aside.cell {
 		padding-right: 0;
 		padding-left: 0
 	}
@@ -819,3 +830,49 @@ div.content-area ul li {
 .archive-events-container > div {
     margin: 30px 0 0 0;
 }
+
+// Stocker Announcement Feed Update grid Fix
+@media only screen and (min-width: 40em) and (max-width: 71em) {
+.headerlogo i {
+  display: none;
+}
+h2.headertext {
+	text-align: center;
+}
+}
+@media screen and (max-width: 21.000em) {
+	.headerlogo i {
+		display: none;
+	}
+	h2.headertext {
+		text-align: center;
+	}
+}
+
+// part of Stocker Homepage Event Feed Update grid Fix
+@media screen and (max-width: 39.938em) {
+	.cell.highlight-image, .cell.highlight-text {
+		width: 100%;
+		float: none;
+	}
+}
+
+// part of Stocker Homepage Badges Feed Update grid Fix
+ .cell.lccc-badge.Orange {
+ 	position:relative;
+	float:left;
+}
+.cell.lccc-badge.Green {
+ position:relative;
+ float:left;
+}
+.cell.icon-container {
+	float:left;
+	margin-left: 2% !important;
+	margin-right: 4%;
+}
+.cell.badge-text {
+	float:left;
+	width: 73%;
+	padding-left: 0 !important;
+ }

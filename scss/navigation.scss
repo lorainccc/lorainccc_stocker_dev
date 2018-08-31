@@ -386,3 +386,7 @@ Once you have the icon, place in icon folder and update the css rule below for .
 	clear: both;
 } 
 ul.sub-menu{padding-top: 15px;}
+
+.dropdown .menu-item{
+	z-index: 50;
+}

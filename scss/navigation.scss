@@ -15,15 +15,6 @@ Section 5: Navigation
 }
 
 header {
-		
-	
-	nav a, nav a:hover {
-		color: $white;
-		font-size: .875rem;
-		font-weight: $font-semibold;
-	}
-	
-	
 	
 	ul#header-menu li a {
 		font-size: .78125rem;	
@@ -88,6 +79,12 @@ header {
   
 	}
 
+}
+
+nav ul a, nav ul a:hover {
+	color: $white;
+	font-size: .875rem;
+	font-weight: $font-semibold;
 }
 
 .medium-blue-bg {
@@ -222,12 +219,6 @@ Once you have the icon, place in icon folder and update the css rule below for .
 .ql-link a#quick-link:link {
 	color: $dark-blue !important;
 	cursor: pointer;	
-}
-
-#mobile-search {
-	-moz-box-shadow:    inset 0 0 2px #000000;
-   -webkit-box-shadow: inset 0 0 2px #000000;
-   box-shadow:         inset 0 0 2px #000000;
 }
 
 #quick-links  {

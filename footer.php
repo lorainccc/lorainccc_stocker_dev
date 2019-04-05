@@ -21,7 +21,13 @@
       <a href="https://www.lorainccc.edu/campus-technology/lccc-mobile/" title="Download LCCC's Mobile App" target="_blank" class="clearfix mobile-app-link"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/smartphone_yellow.svg" heigth="33" width="20" alt="Download LCCC's Mobile App"/>
       <h2>LCCC'S<br />
         Mobile App</h2>
-      </a> </div>
+      </a> 
+      <?php if($_GET['siteurl'] == ''){ ?>
+     <p class="website-feedback">
+      <a href="/website-feedback?siteurl=<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" title="Provide Feedback about this Page" target="_blank">Feedback about this page</a>
+     </p>
+     <?php } ?>
+      </div>
     <div class="large-4 medium-4 columns">
       <h2>Contact Stocker</h2>
       <p>Lorain County Community College<br />Stocker Arts Center<br />1005 N. Abbe Road<br />
@@ -32,9 +38,9 @@
         <li><a href="https://www.lorainccc.edu/stocker/about-the-stocker-arts-center/map-and-directions-to-the-stocker-arts-center/" title="Map and Directions to LCCC">Map and Directions</a></li>
       </ul>
     </div>
-    <div class="large-4 medium-4 columns">
+    <div class="large-4 medium-4 columns" aria-labelledby="menu-footer-quicklinks">
       <h2>Quick Links</h2>
-      <ul class="underline">
+      <ul id="menu-footer-quicklinks" class="underline">
         <li><a href="https://www.lorainccc.edu" title="Visit LCCC's Home page">Lorain County Community College</a></li>
         <li><a href="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/HokeTheatreSeatingChart7.21.16.pdf" title="View the Hoke Theatre Seating Chart">Hoke Theatre Seating Chart</a></li>
       </ul>

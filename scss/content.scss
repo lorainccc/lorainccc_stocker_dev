@@ -1,5 +1,9 @@
 /*! Section 2: Content */
 
+div.content table thead, table tbody, table tfoot{
+    border:0;
+}
+
 .columns.view-all-link a.button.expand {
 	margin-top: 21px;
 }

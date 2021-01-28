@@ -1,5 +1,13 @@
 /*! Section 2: Content */
 
+div.entry-content a, div.taxonomies a, a:focus{
+    text-decoration: underline;
+}
+
+a:focus{
+	text-decoration: underline;
+}
+
 div.content table thead, table tbody, table tfoot{
     border:0;
 }
@@ -183,6 +191,10 @@ article {
 .breadcrumb-container {
 	padding-top: 20px;
 	padding-left: 2rem
+}
+
+.breadcrumb-container a{
+    text-decoration: underline;
 }
 
 a.button {

@@ -40,10 +40,21 @@
     </div>
     <div class="large-4 medium-4 columns" aria-labelledby="menu-footer-quicklinks">
       <h2>Quick Links</h2>
-      <ul id="menu-footer-quicklinks" class="underline">
+  <?php if ( has_nav_menu( 'stocker-footer-quicklinks-menu' ) ) : ?>
+		<nav id="quicklinks-navigation" class="footer-navigation" role="navigation" aria-labelledby="menu-footer-quicklinks"> 
+			<?php
+				// Stocker Quicklinks Footer navigation menu.
+				wp_nav_menu( array(
+					'menu_class'     => 'underline',
+					'theme_location' => 'stocker-footer-quicklinks-menu',
+				) );
+			?>
+		</nav><!-- .quicklinks-navigation -->
+	<?php endif; ?>
+<!--       <ul id="menu-footer-quicklinks" class="underline">
         <li><a href="https://www.lorainccc.edu" title="Visit LCCC's Home page">Lorain County Community College</a></li>
         <li><a href="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/HokeTheatreSeatingChart7.21.16.pdf" title="View the Hoke Theatre Seating Chart">Hoke Theatre Seating Chart</a></li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </footer><!-- #colophon -->

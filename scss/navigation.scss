@@ -81,10 +81,16 @@ header {
 
 }
 
-nav ul a, nav ul a:hover {
+nav ul a, nav ul a:hover{
 	color: $white;
 	font-size: .875rem;
 	font-weight: $font-semibold;
+}
+
+footer li a, footer li a:hover, footer li a:focus {
+    font-weight: 300;
+	font-size: .75rem; 
+	color: #fff;
 }
 
 .medium-blue-bg {
